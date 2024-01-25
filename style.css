@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@300;400;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-image: url("img/pixel-city.jpg");
+    background-color: rgb(231, 228, 228);
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 24em;
+}
+
+img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 24em;
+    margin: auto;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0.25em 0;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 1em 0;
+    font-weight: 800;
+}
+
+header {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+    background-color: rgb(22, 21, 21);
+    opacity: 1;
+}
+
+.relative {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+    border-radius: 50%;
+    width: 5em;
+    transition: all 20s ease-in-out;
+    animation-name: spinning;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        margin: 2em;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

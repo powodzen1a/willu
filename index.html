@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hey Johnny</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 48px;
+      margin-top: 100px;
+    }
+    
+    h2 {
+      font-size: 36px;
+      margin-top: 50px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 24px;
+      margin-top: 50px;
+      cursor: pointer;
+    }
+    
+    #no-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey Johnny</h1>
+  <h2>Will you go out with me?</h2>
+  
+  <a href="https://wa.me/77077121585?text=Yes%2C%20i%20will" class="button">Yes</a>
+  <button id="no-button" class="button">No</button>
+  
+  <script>
+    var noButton = document.getElementById('no-button');
+    var attempts = 0;
+    
+    noButton.addEventListener('click', function() {
+      attempts++;
+      
+      if (attempts === 1) {
+        noButton.style.left = '-100px';
+      } else if (attempts === 2) {
+        noButton.style.top = '0';
+        noButton.style.left = '0';
+      } else if (attempts === 3) {
+        noButton.style.left = 'calc(100% - 100px)';
+      } else if (attempts === 4) {
+        noButton.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
